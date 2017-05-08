@@ -1,8 +1,5 @@
 package startapp;
 
-import configuration.MyAppConfiguration;
-import io.dropwizard.Application;
-import io.dropwizard.Configuration;
 import io.dropwizard.setup.Environment;
 import resources.SaySomethingResource;
 

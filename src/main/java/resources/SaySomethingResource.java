@@ -20,7 +20,7 @@ public class SaySomethingResource {
 
     @GET
     public SaySomething saySomething() throws IOException {
-        // return new SayHello("greetings" , fileZillaClient.getFileFromFTPServer());
+        // return new SaySomething("welcome" , "Kati");
         return new SaySomething("welcome" , "Kati");
     }
 
