@@ -30,6 +30,8 @@
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/commons-net/commons-net -->
+        <!-- Apache Commons Net library contains a collection of network utilities and protocol implementations. -->
+        <!-- Supported protocols include: Echo, Finger, FTP!!!!!!!, NNTP, NTP, POP3(S), SMTP(S), Telnet, Whois -->
         <dependency>
             <groupId>commons-net</groupId>
             <artifactId>commons-net</artifactId>
@@ -37,12 +39,15 @@
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/commons-io/commons-io -->
+        <!-- The Apache Commons IO library contains utility classes, stream implementations, file filters, -->
+        <!-- file comparators, endian transformation classes, and much more. -->
         <dependency>
             <groupId>commons-io</groupId>
             <artifactId>commons-io</artifactId>
             <version>2.4</version>
         </dependency>
 
+        <!-- SSHv2 library for Java -->
         <dependency>
             <groupId>com.hierynomus</groupId>
             <artifactId>sshj</artifactId>
@@ -55,6 +60,8 @@
         <plugins>
 
             <plugin>
+                <!-- Repackages the project classes together with their dependencies into a single uber-jar, -->
+                <!-- optionally renaming classes or removing unused classes. -->
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-shade-plugin</artifactId>
                 <version>2.3</version>
