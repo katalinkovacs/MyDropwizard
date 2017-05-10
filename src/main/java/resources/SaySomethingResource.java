@@ -9,9 +9,7 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import java.io.IOException;
 
-/**
- * Created by kati on 8/05/2017.
- */
+
 
 
 @Path("/saysomething")

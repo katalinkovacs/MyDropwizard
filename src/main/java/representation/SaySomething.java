@@ -2,9 +2,7 @@ package representation;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-/**
- * Created by kati on 8/05/2017.
- */
+
 public class SaySomething {
 
     private String message;

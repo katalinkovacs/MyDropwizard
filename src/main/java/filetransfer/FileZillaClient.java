@@ -8,9 +8,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
 
-/**
- * Created by kati on 8/05/2017.
- */
+
 public class FileZillaClient {
 
     private String server;
