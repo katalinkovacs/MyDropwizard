@@ -15,11 +15,14 @@ public class StartApp extends Application<MyAppConfiguration> {
         String message = configuration.getMessage();
         String serverurl = configuration.getFtpserverurl();
 
+        String doing = configuration.getDoing();
+        String something = configuration.getSomething();
+
         //add new resource --> SaySomethingResource
         e.jersey().register(new SaySomethingResource(message, serverurl));
 
         //add new resource --> DoSomethingResource
-        e.jersey().register(new DoSomethingResource());
+        e.jersey().register(new DoSomethingResource(doing, something));
 
 
 }
