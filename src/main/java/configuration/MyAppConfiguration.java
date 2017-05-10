@@ -9,29 +9,33 @@ public class MyAppConfiguration extends Configuration{
 
 
     private String message;
-
     private String ftpserverurl;
 
 
     private String doing;
+    private String something;
 
+
+    @JsonPropertyOrder
     public String getDoing() {
         return doing;
     }
 
+    @JsonProperty
     public void setDoing(String doing) {
         this.doing = doing;
     }
 
+    @JsonProperty
     public String getSomething() {
         return something;
     }
 
+    @JsonProperty
     public void setSomething(String something) {
         this.something = something;
     }
 
-    private String something;
 
     @JsonPropertyOrder
     public String getMessage() {
