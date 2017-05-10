@@ -6,9 +6,7 @@ import io.dropwizard.setup.Environment;
 import resources.DoSomethingResource;
 import resources.SaySomethingResource;
 
-/**
- * Created by kati on 8/05/2017.
- */
+
 
 public class StartApp extends Application<MyAppConfiguration> {
 
@@ -16,6 +14,7 @@ public class StartApp extends Application<MyAppConfiguration> {
 
         String message = configuration.getMessage();
         String serverurl = configuration.getFtpserverurl();
+
         //add new resource --> SaySomethingResource
         e.jersey().register(new SaySomethingResource(message, serverurl));
 

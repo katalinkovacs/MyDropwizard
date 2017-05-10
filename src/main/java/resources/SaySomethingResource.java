@@ -35,9 +35,9 @@ public class SaySomethingResource {
     @GET
     @Path("/serverurl")
     public SaySomething saySomethingUrl() throws IOException {
-        // return new SaySomething("welcome" , "Kati");
-        return new SaySomething("serverulr" ,serverurl );
+        return new SaySomething("serverurl" ,serverurl );
     }
+
 
 
 

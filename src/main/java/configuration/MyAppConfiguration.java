@@ -7,6 +7,32 @@ import io.dropwizard.Configuration;
 
 public class MyAppConfiguration extends Configuration{
 
+
+    private String message;
+
+    private String ftpserverurl;
+
+
+    private String doing;
+
+    public String getDoing() {
+        return doing;
+    }
+
+    public void setDoing(String doing) {
+        this.doing = doing;
+    }
+
+    public String getSomething() {
+        return something;
+    }
+
+    public void setSomething(String something) {
+        this.something = something;
+    }
+
+    private String something;
+
     @JsonPropertyOrder
     public String getMessage() {
         return message;
@@ -17,9 +43,7 @@ public class MyAppConfiguration extends Configuration{
         this.message = message;
     }
 
-    private String message;
 
-    private String ftpserverurl;
 
     @JsonProperty
     public String getFtpserverurl() {
