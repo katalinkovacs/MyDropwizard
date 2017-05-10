@@ -4,7 +4,6 @@ import configuration.MyAppConfiguration;
 import io.dropwizard.Application;
 import io.dropwizard.setup.Environment;
 import resources.DoSomethingResource;
-import resources.EmployeeResource;
 import resources.SaySomethingResource;
 
 /**
@@ -23,9 +22,8 @@ public class StartApp extends Application<MyAppConfiguration> {
         //add new resource --> DoSomethingResource
         e.jersey().register(new DoSomethingResource());
 
-        //add new resource --> EmployeeResource
-        e.jersey().register(new EmployeeResource());
-    }
+
+}
 
 
     public static void main(String[] args) throws Exception {
