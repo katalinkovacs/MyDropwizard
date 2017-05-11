@@ -17,6 +17,13 @@ public class DoSomethingResource {
 
 
     private String doing;
+    private String something;
+
+    public  DoSomethingResource(String doing, String something){
+        this.doing = doing;
+        this.something = something;
+    }
+
 
     public String getDoing() {
         return doing;
@@ -34,7 +41,6 @@ public class DoSomethingResource {
         this.something = something;
     }
 
-    private String something;
 
     @GET
     public DoSomething doSomething() throws IOException {
