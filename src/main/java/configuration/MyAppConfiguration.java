@@ -1,7 +1,6 @@
 package configuration;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import io.dropwizard.Configuration;
 
 
@@ -10,13 +9,11 @@ public class MyAppConfiguration extends Configuration{
 
     private String message;
     private String ftpserverurl;
-
-
     private String doing;
     private String something;
 
 
-    @JsonPropertyOrder
+    @JsonProperty
     public String getDoing() {
         return doing;
     }
@@ -37,7 +34,7 @@ public class MyAppConfiguration extends Configuration{
     }
 
 
-    @JsonPropertyOrder
+    @JsonProperty
     public String getMessage() {
         return message;
     }

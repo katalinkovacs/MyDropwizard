@@ -1,26 +1,30 @@
 package representation;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
+import javax.xml.bind.annotation.XmlRootElement;
 
-
-public class SaySomething {
+@XmlRootElement
+public class SaySomethingXML {
 
     private String greetings;
 
     private String people;
 
 
-    public SaySomething(String greetings, String people) {
+    public void setGreetings(String greetings) {
         this.greetings = greetings;
+    }
+
+
+    public void setPeople(String people) {
         this.people = people;
     }
 
-    @JsonProperty
+
     public String getGreetings() {
         return greetings;
     }
 
-    @JsonProperty
+
     public String getPeople() {
         return people;
     }

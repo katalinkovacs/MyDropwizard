@@ -10,11 +10,11 @@ import resources.SaySomethingResource;
 
 public class StartApp extends Application<MyAppConfiguration> {
 
+    @Override
     public void run(MyAppConfiguration configuration, Environment e) throws Exception {
 
         String message = configuration.getMessage();
         String serverurl = configuration.getFtpserverurl();
-
         String doing = configuration.getDoing();
         String something = configuration.getSomething();
 

@@ -1,9 +1,9 @@
 package resources;
 
 import representation.SaySomething;
+import representation.SaySomethingXML;
 
 import javax.ws.rs.GET;
-import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
@@ -13,8 +13,6 @@ import java.io.IOException;
 
 
 @Path("/saysomething")
-@Produces(MediaType.APPLICATION_JSON)
-
 public class SaySomethingResource {
 
     private String message;
@@ -26,9 +24,32 @@ public class SaySomethingResource {
     }
 
     @GET
-    public SaySomething saySomething() throws IOException {
+    @Path("/text")
+    @Produces(MediaType.TEXT_PLAIN)
+    public String saySomethingText() throws IOException {
+        return "hello zoli";
+    }
+
+
+    @GET
+    @Path("/json")
+    @Produces(MediaType.APPLICATION_JSON)
+    public SaySomething saySomethingJson() throws IOException {
         // return new SaySomething("welcome" , "Kati");
-        return new SaySomething("welcome" , message);
+        return new SaySomething("welcome" , "kati");
+
+    }
+
+    @GET
+    @Path("/xml")
+    @Produces(MediaType.APPLICATION_XML)
+    public SaySomethingXML saySomethingXml() throws IOException {
+        // return new SaySomething("welcome" , "Kati");
+        SaySomethingXML ssxml = new SaySomethingXML();
+        ssxml.setGreetings("hello");
+        ssxml.setPeople("people");
+        return ssxml;
+
     }
 
 
