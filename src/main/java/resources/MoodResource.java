@@ -23,12 +23,15 @@ public class MoodResource {
 
 
     @GET
-    //@Path("/sebi)
+    @Path("/sebi")
     @Produces(MediaType.APPLICATION_JSON)
 
     public Mood mood() throws IOException {
         return new Mood("sebi" , "good");
     }
+
+
+
 
 
 }
