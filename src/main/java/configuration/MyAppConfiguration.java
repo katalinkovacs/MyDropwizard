@@ -7,16 +7,16 @@ import io.dropwizard.Configuration;
 
 public class MyAppConfiguration extends Configuration{
 
-
     //same variables as in yml file
-
 
     private String message;
     private String ftpserverurl;
 
-
     private String doing;
     private String something;
+
+    private String yourmood;
+    private String yourthing;
 
 
     @JsonProperty
@@ -40,6 +40,7 @@ public class MyAppConfiguration extends Configuration{
     }
 
 
+
     @JsonProperty
     public String getMessage() {
         return message;
@@ -50,8 +51,6 @@ public class MyAppConfiguration extends Configuration{
         this.message = message;
     }
 
-
-
     @JsonProperty
     public String getFtpserverurl() {
         return ftpserverurl;
@@ -60,5 +59,23 @@ public class MyAppConfiguration extends Configuration{
     @JsonProperty
     public void setFtpserverurl(String ftpserverurl) {
         this.ftpserverurl = ftpserverurl;
+    }
+
+
+    @JsonProperty
+    public String getYourmood() {
+        return yourmood;
+    }
+    @JsonProperty
+    public void setYourmood(String yourmood) {
+        this.yourmood = yourmood;
+    }
+    @JsonProperty
+    public String getYourthing() {
+        return yourthing;
+    }
+    @JsonProperty
+    public void setYourthing(String yourthing) {
+        this.yourthing = yourthing;
     }
 }

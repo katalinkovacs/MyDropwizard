@@ -21,8 +21,8 @@ public class StartApp extends Application<MyAppConfiguration> {
         String doing = configuration.getDoing();
         String something = configuration.getSomething();
 
-        String yourmood = configuration.getDoing();
-        String yourthing = configuration.getSomething();
+        String yourmood = configuration.getYourmood();
+        String yourthing = configuration.getYourthing();
 
         //add new resource --> SaySomethingResource
         e.jersey().register(new SaySomethingResource(message, serverurl));
