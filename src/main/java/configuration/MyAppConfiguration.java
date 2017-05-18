@@ -8,6 +8,9 @@ import io.dropwizard.Configuration;
 public class MyAppConfiguration extends Configuration{
 
 
+    //same variables as in yml file
+
+
     private String message;
     private String ftpserverurl;
 
@@ -16,7 +19,7 @@ public class MyAppConfiguration extends Configuration{
     private String something;
 
 
-    @JsonPropertyOrder
+    @JsonProperty
     public String getDoing() {
         return doing;
     }
@@ -37,7 +40,7 @@ public class MyAppConfiguration extends Configuration{
     }
 
 
-    @JsonPropertyOrder
+    @JsonProperty
     public String getMessage() {
         return message;
     }
