@@ -1,5 +1,7 @@
 package resources;
 
+import dao.MealRecord;
+import dao.MockDB;
 import representation.Meal;
 
 import javax.ws.rs.GET;
@@ -11,23 +13,20 @@ import java.io.IOException;
 @Path("/sebi")
 public class SebisWorld {
 
-    private String yourdrink;
-    private String yourfood;
-    private String yourdessert;
 
+    MockDB mDB = new MockDB();
 
 
     public SebisWorld(){
-
     }
-
-
 
     @GET
     @Path("/breakfast")
     @Produces(MediaType.APPLICATION_JSON)
     public Meal breakfast() throws IOException {
-        return new Meal( "milk", "cereal", "fruit");
+        //get breakfast object from map
+        MealRecord breakfast = mDB.getMealTable().get("breakfast");
+        return new Meal( breakfast.getDrink(), breakfast.getFood(), breakfast.getDessert());
     }
 
     @GET
