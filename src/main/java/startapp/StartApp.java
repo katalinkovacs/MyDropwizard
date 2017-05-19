@@ -23,6 +23,7 @@ public class StartApp extends Application<MyAppConfiguration> {
 
         String yourmood = configuration.getYourmood();
         String yourthing = configuration.getYourthing();
+        int yourscale = configuration.getYourscale();
 
         //add new resource --> SaySomethingResource
         e.jersey().register(new SaySomethingResource(message, serverurl));
@@ -30,7 +31,7 @@ public class StartApp extends Application<MyAppConfiguration> {
         //add new resource --> DoSomethingResource
         e.jersey().register(new DoSomethingResource(doing, something));
 
-        e.jersey().register(new MoodResource(yourmood, yourthing));
+        e.jersey().register(new MoodResource(yourmood, yourthing, yourscale));
 
 
     }

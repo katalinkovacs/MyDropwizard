@@ -17,6 +17,7 @@ public class MyAppConfiguration extends Configuration{
 
     private String yourmood;
     private String yourthing;
+    private int yourscale;
 
 
     @JsonProperty
@@ -78,4 +79,14 @@ public class MyAppConfiguration extends Configuration{
     public void setYourthing(String yourthing) {
         this.yourthing = yourthing;
     }
+    @JsonProperty
+    public int getYourscale() {
+        return yourscale;
+    }
+    @JsonProperty
+    public void setYourscale(int yourscale) {
+        this.yourscale = yourscale;
+    }
+
+
 }

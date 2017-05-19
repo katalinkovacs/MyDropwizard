@@ -9,10 +9,13 @@ public class Mood {
 
     private String mood;
 
+    private int scale;
 
-    public Mood(String person, String mood) {
+
+    public Mood(String person, String mood, int scale) {
         this.person = person;
         this.mood = mood;
+        this.scale = scale;
     }
 
     @JsonProperty
@@ -23,5 +26,10 @@ public class Mood {
     @JsonProperty
     public String getMood() {
         return mood;
+    }
+
+    @JsonProperty
+    public int getScale() {
+        return scale;
     }
 }
