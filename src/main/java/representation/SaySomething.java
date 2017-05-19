@@ -5,24 +5,24 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class SaySomething {
 
-    private String message;
+    private String greetings;
 
-    private String name;
+    private String people;
 
 
-    public SaySomething(String message, String name) {
-        this.message = message;
-        this.name = name;
+    public SaySomething(String greetings, String people) {
+        this.greetings = greetings;
+        this.people = people;
     }
 
     @JsonProperty
-    public String getMessage() {
-        return message;
+    public String getGreetings() {
+        return greetings;
     }
 
     @JsonProperty
-    public String getName() {
-        return name;
+    public String getPeople() {
+        return people;
     }
 
 }

@@ -5,24 +5,24 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class DoSomething {
 
-    private String verb;
+    private String doing;
 
-    private String item;
+    private String something;
 
 
-    public DoSomething(String verb, String item) {
-        this.verb = verb;
-        this.item = item;
+    public DoSomething(String doing, String something) {
+        this.doing = doing;
+        this.something = something;
     }
 
     @JsonProperty
-    public String getVerb() {
-        return verb;
+    public String getDoing() {
+        return doing;
     }
 
     @JsonProperty
-    public String getItem() {
-        return item;
+    public String getSomething() {
+        return something;
     }
 
 }

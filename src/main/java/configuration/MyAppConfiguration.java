@@ -7,7 +7,42 @@ import io.dropwizard.Configuration;
 
 public class MyAppConfiguration extends Configuration{
 
-    @JsonPropertyOrder
+    //same variables as in yml file
+
+    private String message;
+    private String ftpserverurl;
+
+    private String doing;
+    private String something;
+
+    private String yourmood;
+    private String yourthing;
+    private int yourscale;
+
+
+    @JsonProperty
+    public String getDoing() {
+        return doing;
+    }
+
+    @JsonProperty
+    public void setDoing(String doing) {
+        this.doing = doing;
+    }
+
+    @JsonProperty
+    public String getSomething() {
+        return something;
+    }
+
+    @JsonProperty
+    public void setSomething(String something) {
+        this.something = something;
+    }
+
+
+
+    @JsonProperty
     public String getMessage() {
         return message;
     }
@@ -16,10 +51,6 @@ public class MyAppConfiguration extends Configuration{
     public void setMessage(String message) {
         this.message = message;
     }
-
-    private String message;
-
-    private String ftpserverurl;
 
     @JsonProperty
     public String getFtpserverurl() {
@@ -30,4 +61,32 @@ public class MyAppConfiguration extends Configuration{
     public void setFtpserverurl(String ftpserverurl) {
         this.ftpserverurl = ftpserverurl;
     }
+
+
+    @JsonProperty
+    public String getYourmood() {
+        return yourmood;
+    }
+    @JsonProperty
+    public void setYourmood(String yourmood) {
+        this.yourmood = yourmood;
+    }
+    @JsonProperty
+    public String getYourthing() {
+        return yourthing;
+    }
+    @JsonProperty
+    public void setYourthing(String yourthing) {
+        this.yourthing = yourthing;
+    }
+    @JsonProperty
+    public int getYourscale() {
+        return yourscale;
+    }
+    @JsonProperty
+    public void setYourscale(int yourscale) {
+        this.yourscale = yourscale;
+    }
+
+
 }
