@@ -2,9 +2,7 @@ package dao;
 
 import java.util.HashMap;
 
-/**
- * Created by Zoli on 19/05/2017.
- */
+
 public class MockDB {
 
 
@@ -12,8 +10,9 @@ public class MockDB {
 
     //constructor building mock table with data later it will be a real DB
     public MockDB(){
-        mealTable.put("breakfast", new MealRecord("milk", "vegimite bread", "apple"));
-        mealTable.put("lunch", new MealRecord("water", "sausage", "rolletti"));
+        mealTable.put("breakfast", new MealRecord("milk", "vegemite bread", "apple"));
+        mealTable.put("lunch", new MealRecord("apple juice", "sausage", "rolletti"));
+        mealTable.put("dinner", new MealRecord("water", "lamb", "waffle"));
     }
 
 

@@ -34,14 +34,19 @@ public class SebisWorld {
     @Produces(MediaType.APPLICATION_JSON)
     public Meal lunch() throws IOException {
         //return new Meal( yourdrink, yourfood, yourdessert);
-        return new Meal( "orange juice", "pasta", "pudding");
+        //return new Meal( "orange juice", "pasta", "pudding");
+        //get breakfast object from map
+        MealRecord lunch = mDB.getMealTable().get("lunch");
+        return new Meal( lunch.getDrink(), lunch.getFood(), lunch.getDessert());
     }
 
     @GET
     @Path("/dinner")
     @Produces(MediaType.APPLICATION_JSON)
     public Meal dinner() throws IOException {
-        return new Meal( "tea", "chicken with rice", "pancake");
+        //return new Meal( "tea", "chicken with rice", "pancake");
+        MealRecord dinner = mDB.getMealTable().get("dinner");
+        return new Meal( dinner.getDrink(), dinner.getFood(), dinner.getDessert());
     }
 
 

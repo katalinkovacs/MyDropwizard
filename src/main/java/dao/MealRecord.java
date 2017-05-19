@@ -1,8 +1,6 @@
 package dao;
 
-/**
- * Created by Zoli on 19/05/2017.
- */
+
 public class MealRecord {
 
     public MealRecord(String drink, String food, String dessert){
