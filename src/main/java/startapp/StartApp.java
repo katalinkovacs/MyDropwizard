@@ -3,7 +3,6 @@ package startapp;
 import configuration.MyAppConfiguration;
 import io.dropwizard.Application;
 import io.dropwizard.setup.Environment;
-import resources.DoSomethingResource;
 import resources.SebisWorld;
 import resources.SaySomethingResource;
 
@@ -18,13 +17,6 @@ public class StartApp extends Application<MyAppConfiguration> {
         String message = configuration.getMessage();
         String serverurl = configuration.getFtpserverurl();
 
-        String doing = configuration.getDoing();
-        String something = configuration.getSomething();
-
-        String yourmood = configuration.getYourmood();
-        String yourthing = configuration.getYourthing();
-        int yourscale = configuration.getYourscale();
-
         String yourdrink = configuration.getYourdrink();
         String yourfood = configuration.getYourfood();
         String yourdessert = configuration.getYourdessert();
@@ -34,12 +26,7 @@ public class StartApp extends Application<MyAppConfiguration> {
         //add new resource --> SaySomethingResource
         e.jersey().register(new SaySomethingResource(message, serverurl));
 
-        //add new resource --> DoSomethingResource
-        e.jersey().register(new DoSomethingResource(doing, something));
-
-        e.jersey().register(new SebisWorld(yourmood, yourthing, yourscale));
-
-        e.jersey().register(new SebisWorld(yourdrink, yourfood, yourdessert));
+        e.jersey().register(new SebisWorld());
 
 
     }
