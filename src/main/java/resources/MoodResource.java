@@ -8,7 +8,7 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import java.io.IOException;
 
-@Path("/mood")
+@Path("/sebi")
 public class MoodResource {
 
     private String yourmood;
@@ -23,9 +23,8 @@ public class MoodResource {
     }
 
 
-
     @GET
-    @Path("/sebi")
+    @Path("/mood1")
     @Produces(MediaType.APPLICATION_JSON)
 
     public Mood mood() throws IOException {
@@ -33,7 +32,7 @@ public class MoodResource {
     }
 
     @GET
-    @Path("/sebi2")
+    @Path("/mood2")
     @Produces(MediaType.APPLICATION_JSON)
 
     public Mood mood2() throws IOException {
@@ -41,7 +40,7 @@ public class MoodResource {
     }
 
     @GET
-    @Path("/sebi3")
+    @Path("/mood3")
     @Produces(MediaType.APPLICATION_JSON)
 
     public Mood mood3() throws IOException {
