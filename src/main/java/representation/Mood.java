@@ -5,23 +5,15 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class Mood {
 
-    private String person;
-
     private String mood;
-
     private int scale;
 
 
-    public Mood(String person, String mood, int scale) {
-        this.person = person;
+    public Mood(String mood, int scale) {
         this.mood = mood;
         this.scale = scale;
     }
 
-    @JsonProperty
-    public String getPerson() {
-        return person;
-    }
 
     @JsonProperty
     public String getMood() {

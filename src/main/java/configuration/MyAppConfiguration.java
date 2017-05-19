@@ -1,7 +1,6 @@
 package configuration;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import io.dropwizard.Configuration;
 
 
@@ -18,6 +17,10 @@ public class MyAppConfiguration extends Configuration{
     private String yourmood;
     private String yourthing;
     private int yourscale;
+
+    private String yourdrink;
+    private String yourfood;
+    private String yourdessert;
 
 
     @JsonProperty
@@ -63,6 +66,7 @@ public class MyAppConfiguration extends Configuration{
     }
 
 
+
     @JsonProperty
     public String getYourmood() {
         return yourmood;
@@ -89,4 +93,29 @@ public class MyAppConfiguration extends Configuration{
     }
 
 
+
+    @JsonProperty
+    public String getYourdrink() {
+        return yourdrink;
+    }
+    @JsonProperty
+    public void setYourdrink(String yourdrink) {
+        this.yourdrink = yourdrink;
+    }
+    @JsonProperty
+    public String getYourfood() {
+        return yourfood;
+    }
+    @JsonProperty
+    public void setYourfood(String yourfood) {
+        this.yourfood = yourfood;
+    }
+    @JsonProperty
+    public String getYourdessert() {
+        return yourdessert;
+    }
+    @JsonProperty
+    public void setYourdessert(String yourdessert) {
+        this.yourdessert = yourdessert;
+    }
 }
