@@ -1,30 +1,59 @@
 package representation;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-
 public class Meal {
 
+    
+    public String getKind() {
+        return kind;
+    }
+
+    
+    public void setKind(String kind) {
+        this.kind = kind;
+    }
+
+    private String kind;
     private String drink;
     private String food;
     private String dessert;
 
-    public Meal(String drink, String food, String dessert) {
+    public Meal(String kind, String drink, String food, String dessert) {
+        this.kind = kind;
         this.drink = drink;
         this.food = food;
         this.dessert = dessert;
     }
 
-    @JsonProperty
+    public Meal(){
+
+    }
+
+    
+    public void setDrink(String drink) {
+        this.drink = drink;
+    }
+
+    
+    public void setFood(String food) {
+        this.food = food;
+    }
+
+    
+    public void setDessert(String dessert) {
+        this.dessert = dessert;
+    }
+
+    
     public String getDrink() {
         return drink;
     }
 
-    @JsonProperty
+    
     public String getFood() {
         return food;
     }
 
-    @JsonProperty
+    
     public String getDessert() {
         return dessert;
     }

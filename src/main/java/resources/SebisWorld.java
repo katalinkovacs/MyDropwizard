@@ -4,10 +4,9 @@ import dao.MealRecord;
 import dao.MockDB;
 import representation.Meal;
 
-import javax.ws.rs.GET;
-import javax.ws.rs.Path;
-import javax.ws.rs.Produces;
+import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
 import java.io.IOException;
 
 @Path("/sebi")
@@ -26,7 +25,7 @@ public class SebisWorld {
     public Meal breakfast() throws IOException {
         //get breakfast object from map
         MealRecord breakfast = mDB.getMealTable().get("breakfast");
-        return new Meal( breakfast.getDrink(), breakfast.getFood(), breakfast.getDessert());
+        return new Meal( "breakfast", breakfast.getDrink(), breakfast.getFood(), breakfast.getDessert());
     }
 
     @GET
@@ -37,7 +36,7 @@ public class SebisWorld {
         //return new Meal( "orange juice", "pasta", "pudding");
         //get breakfast object from map
         MealRecord lunch = mDB.getMealTable().get("lunch");
-        return new Meal( lunch.getDrink(), lunch.getFood(), lunch.getDessert());
+        return new Meal( "lunch", lunch.getDrink(), lunch.getFood(), lunch.getDessert());
     }
 
     @GET
@@ -46,7 +45,24 @@ public class SebisWorld {
     public Meal dinner() throws IOException {
         //return new Meal( "tea", "chicken with rice", "pancake");
         MealRecord dinner = mDB.getMealTable().get("dinner");
-        return new Meal( dinner.getDrink(), dinner.getFood(), dinner.getDessert());
+        return new Meal("dinner", dinner.getDrink(), dinner.getFood(), dinner.getDessert());
+    }
+
+
+    @GET
+    @Path("/mealrequest")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Meal getSpecialMeal(@QueryParam("kind") String kind){
+        MealRecord specialMeal = mDB.getMealTable().get(kind);
+        return new Meal(kind, specialMeal.getDrink(), specialMeal.getFood(), specialMeal.getDessert());
+    }
+
+    @POST
+    @Path("/mealrequest")
+    @Consumes(MediaType.APPLICATION_JSON)
+    public Response acceptMealRequets(Meal meal){
+        mDB.getMealTable().put(meal.getKind(), new MealRecord(meal.getDrink(), meal.getFood(), meal.getDessert()));
+        return Response.ok("Meal accpeted").build();
     }
 
 
