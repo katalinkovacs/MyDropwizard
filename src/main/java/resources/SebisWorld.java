@@ -3,6 +3,7 @@ package resources;
 import dao.MealRecord;
 import dao.MockDB;
 import representation.Meal;
+import representation.MealXML;
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
@@ -48,6 +49,16 @@ public class SebisWorld {
         return new Meal("dinner", dinner.getDrink(), dinner.getFood(), dinner.getDessert());
     }
 
+
+    // xml version of dinner
+    @GET
+    @Path("/dinner/xml")
+    @Produces(MediaType.APPLICATION_XML)
+    public MealXML dinnerXML() throws IOException {
+        //return new Meal( "tea", "chicken with rice", "pancake");
+        MealRecord dinner = mDB.getMealTable().get("dinner");
+        return new MealXML("dinner", dinner.getDrink(), dinner.getFood(), dinner.getDessert());
+    }
 
     @GET
     @Path("/mealrequest")

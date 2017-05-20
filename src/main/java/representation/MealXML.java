@@ -1,22 +1,25 @@
 package representation;
 
-public class Meal {
+import javax.xml.bind.annotation.XmlRootElement;
 
-    
+@XmlRootElement
+public class MealXML {
+
+
 
     private String kind;
     private String drink;
     private String food;
     private String dessert;
 
-    public Meal(String kind, String drink, String food, String dessert) {
+    public MealXML(String kind, String drink, String food, String dessert) {
         this.kind = kind;
         this.drink = drink;
         this.food = food;
         this.dessert = dessert;
     }
 
-    public Meal(){
+    public MealXML(){
 
     }
 
